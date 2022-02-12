@@ -6,7 +6,7 @@
     <arg name="operation_mode" default="IMU"/>
     <arg name="oscillator" default="INTERNAL" />
     <arg name="reset_orientation" default="true" />
-    <arg name="frequency" default="50" /> 
+    <arg name="frequency" default="100" /> 
     <arg name="use_magnetometer" default="true" />
     <arg name="use_temperature" default="true" /> 
 
@@ -20,8 +20,8 @@
         <param name="frequency" value="$(arg frequency)" />
         <param name="use_magnetometer" value="$(arg use_magnetometer)" />    
         <param name="use_temperature" value="$(arg use_temperature)" />
-        <remap from="imu/data" to="imu/data_raw"/>
-        <remap from="imu/magnetometer" to="imu/mag"/>    
+        <remap from="imu/data" to="imu_bno055/data"/>
+        <remap from="imu/magnetometer" to="imu_bno055/mag"/>    
     </node>
 
 </launch>

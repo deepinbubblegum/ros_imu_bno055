@@ -19,7 +19,9 @@
         <param name="reset_orientation" value = "$(arg reset_orientation)" />
         <param name="frequency" value="$(arg frequency)" />
         <param name="use_magnetometer" value="$(arg use_magnetometer)" />    
-        <param name="use_temperature" value="$(arg use_temperature)" />    
+        <param name="use_temperature" value="$(arg use_temperature)" />
+        <remap from="imu/data" to="imu/data_raw"/>
+        <remap from="imu/magnetometer" to="imu/mag"/>    
     </node>
 
 </launch>
